@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Luminstep Website{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head> 
+<body>
+    <!--header and navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">LumiNstep.</h2>
+            </a>
+        
+            <ul class="nav-menu">
+                
+                <button id="menu-close-button" class="fas fa-times"><i class="ri-close-large-line"></i></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-item nav-link {% if request.path == '/about' %}active{% endif %}">About us </a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/service" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Services</a>
+                
+                </li>
+                <li class="nav-item">
+                    <a href="/team" class="nav-item nav-link {% if request.path == '/team' %}active{% endif %}">Team</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/terms" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Terms</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-item nav-link {% if request.path == '/contact' %}active{% endif %}">Contact us </a>
+               
+                </li>
+             
+               
+            </ul>
+            <!-- Login Button -->
+            <a href="/login" class="login-button">Register</a>
+
+            <button id="menu-open-button" class="fas fa-bars"><i class="ri-menu-line"></i></button>
+        </nav>
+    </header>
+    
+    <main>
+        <!--home section-->
+        <section  id="home" class="home-section">
+            <div class="home-image-wrapper">
+                <img src="{{ url_for('static', filename='images/banner-man.png') }}" alt="first" class="first-image">
+            </div>
+            
+            
+            <div class="home-content">
+                <div class="home-details">
+                    <h2 class="title"> 
+                        Luminstep
+                    </h2>
+                    <h3 class="subtitle">
+                        Your partner for navigating , International contracts  
+                    </h3>
+                    <p class="description">
+                        Luminstep is your dedicated partner in navigating the complexities of international contracts.
+                    </p>
+                    <div class="buttons">
+                        <a href="/about" class="button read-more">Read More</a>
+                        
+                    </div>
+                </div>
+                
+            </div>    
+         </section>
+          <!--About section-->
+          <section id="about-us" class="about-us-section">
+            <div class="about-us-header">
+                <h2 class="section-title">About Us</h2>
+                
+            </div>
+        
+            <p class="about-us-description">
+              Luminstep is a dynamic company dedicated to facilitating international contracts and fostering global partnerships. With a mission to bridge businesses across borders, the company specializes in providing comprehensive services, including contract drafting, negotiation, and legal consultation tailored to international standards. Their expert team of legal advisors and business strategists ensures that every agreement is aligned with the client's goals while adhering to the diverse regulatory requirements of different countries. By leveraging technology and a vast network of global contacts, Luminstep simplifies complex processes, enabling businesses to expand their reach and establish lasting relationships worldwide. Their commitment to transparency, efficiency, and excellence makes them a trusted partner for companies looking to thrive in the international market.
+              <img src="{{ url_for('static', filename='images/aboutt.jpg') }}" alt="About Us Image">
+
+          </p>
+          
+          <div class="about-info">
+            <h1 class="about-info-title">Get to Know Us Better!</h1>
+            <ul class="about-info-section">
+                <li>
+                    <i class="ri-calendar-fill"></i>
+                    <h3 class="name">PROJECTS</h3>
+                    <h5>1111</h5>
+                </li>
+                <li>
+                    <i class="ri-user-fill"></i>
+                    <h3 class="name">CLIENTS</h3>
+                    <h5>1111</h5>
+                </li>
+                <li>
+                    <i class="ri-bar-chart-grouped-line"></i>
+                    <h3 class="name">CUSTOMERS</h3>
+                    <h5>1111</h5>
+                </li>
+                <li>
+                    <i class="ri-computer-line"></i>
+                    <h3 class="name">TECHNOLOGY</h3>
+                    <h5>1111</h5>
+                </li>
+            </ul>
+        </div>
+         </section>
+
+         
+         <!--service sction-->
+         <section id="services" class="service-section">
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="section-content">
+                <ul class="service-list">
+                   <li class="service-item">
+                    <div class="icon"><i class="ri-computer-line"></i></div>
+                    <h3 class="name">our service</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+                   </li>
+                   <li class="service-item">
+                    <div class="icon"><i class="ri-computer-line"></i></div>
+                    <h3 class="name">our service</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+                   </li>
+                   <li class="service-item">
+                    <div class="icon"><i class="ri-computer-line"></i></div>
+                    <h3 class="name">our service</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+                   </li>
+                   <li class="service-item">
+                    <div class="icon"><i class="ri-computer-line"></i></div>
+                    <h3 class="name">our service</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+                   </li>
+                  
+                   </ul>
+            </div>
+          <!-- Why Our Company Section -->
+<section class="why-company">
+    <div class="section-content">
+        <div class="why-company-row">
+            <!-- First Column: Introduction -->
+            <div class="why-intro">
+                <h2 class="section-title">Why Choose Luminstep?</h2>
+            
+            </div>
+            <!-- Second Column: Features -->
+            <div class="why-features">
+                <div class="why-item">
+                    <i class="ri-team-line"></i>
+                    <h3 class="why-title">Experienced Team</h3>
+                    <p class="why-text">Our team comprises professionals with years of experience, ensuring top-notch service delivery.</p>
+                </div>
+                <div class="why-item">
+                    <i class="ri-award-line"></i>
+                    <h3 class="why-title">Quality Assurance</h3>
+                    <p class="why-text">We prioritize quality in every project to exceed client expectations and achieve excellence.</p>
+                </div>
+                <div class="why-item">
+                    <i class="ri-time-line"></i>
+                    <h3 class="why-title">Timely Delivery</h3>
+                    <p class="why-text">We understand the importance of deadlines and always strive to deliver projects on time.</p>
+                </div>
+                <div class="why-item">
+                    <i class="ri-customer-service-2-line"></i>
+                    <h3 class="why-title">Excellent Support</h3>
+                    <p class="why-text">Our support team is always ready to assist with any inquiries or issues you might have.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+         </section>
+
+<section id="login" class="login">
+    <h2 class="section-title">Registration </h2>
+    <div class="container" id="container">
+     
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                
+                <div class="infield">
+                    <input type="text" placeholder="Name" />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <button >Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+               
+               
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <a href="#" class="forgot">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Your account is waiting for you! Log in now to stay connected with us.</p>
+                    <button>Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello,There !</h1>
+                    <p>Share your personal details to begin your journey with us.</p>
+
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+</section>
+
+
+       <!--footer section-->
+<footer class="footer-section">
+    <div class="section-content">
+        <!-- Company Logo and Name -->
+        <div class="logo-and-name">
+           <h1>Luminstep.</h1>
+            <p class="company-name">Luminstep</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-nav">
+           
+            <a href="/" class="footer-link">Home</a>
+            <a href="/about" class="footer-link">About </a>
+            <a href="/service" class="footer-link">Services</a>
+            <a href="/terms" class="footer-link">Terms</a>
+            <a href="/team" class="footer-link">Team</a>
+            <a href="/contact" class="footer-link">Contact</a>
+        </div>
+
+        <!-- Copyright and Social Links -->
+        <div class="copyright-and-social">
+            
+            <div class="social-link-list">
+                <a href="#" class="social-link"><i class="ri-linkedin-line"></i></a>
+                <a href="#" class="social-link"><i class="ri-mail-line"></i></a>
+            </div>
+            <p class="copyright-text"> <i class="ri-copyright-line"></i> 2024 Luminstep.</p>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </main>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

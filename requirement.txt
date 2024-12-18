@@ -1,0 +1,5 @@
+Flask==2.2.5
+connexion[swagger-ui]==2.14.1
+PyYAML==6.0.1
+flask_sqlalchemy
+sqlalchemy

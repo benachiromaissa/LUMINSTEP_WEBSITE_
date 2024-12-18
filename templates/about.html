@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Luminstep Website{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head> 
+<body>
+    <!--header and navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">LumiNstep.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"><i class="ri-close-large-line"></i></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-item nav-link {% if request.path == '/about' %}active{% endif %}">About us </a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/service" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Services</a>
+                
+                </li>
+                <li class="nav-item">
+                    <a href="/team" class="nav-item nav-link {% if request.path == '/team' %}active{% endif %}">Team</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/terms" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Terms</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-item nav-link {% if request.path == '/contact' %}active{% endif %}">Contact us </a>
+               
+                </li>
+             
+               
+            </ul>
+                <!-- Login Button -->
+                <a href="{{ url_for('login') }}" class="login-button">Login</a>
+            <button id="menu-open-button" class="fas fa-bars"><i class="ri-menu-line"></i></button>
+        </nav>
+    </header>
+ 
+    <body>
+     
+        <section id="about-us" class="about-us-section">
+            <div class="about-us-header">
+                <h2 class="section-title">About Us</h2>
+                
+            </div>
+        
+            <p class="about-us-description">
+              Luminstep is a dynamic company dedicated to facilitating international contracts and fostering global partnerships. With a mission to bridge businesses across borders, the company specializes in providing comprehensive services, including contract drafting, negotiation, and legal consultation tailored to international standards. Their expert team of legal advisors and business strategists ensures that every agreement is aligned with the client's goals while adhering to the diverse regulatory requirements of different countries. By leveraging technology and a vast network of global contacts, Luminstep simplifies complex processes, enabling businesses to expand their reach and establish lasting relationships worldwide. Their commitment to transparency, efficiency, and excellence makes them a trusted partner for companies looking to thrive in the international market.
+              <img src="{{ url_for('static', filename='images/aboutt.jpg') }}" alt="About Us Image">
+
+          </p>
+          
+          <div class="about-info">
+            <h1 class="section-title"> Know Us Better</h1>
+            <ul class="about-info-section">
+                <li>
+                    <i class="ri-calendar-fill"></i>
+                    <h3 class="name">PROJECTS</h3>
+                    <h5>1111</h5>
+                </li>
+                <li>
+                    <i class="ri-user-fill"></i>
+                    <h3 class="name">CLIENTS</h3>
+                    <h5>1111</h5>
+                </li>
+                <li>
+                    <i class="ri-bar-chart-grouped-line"></i>
+                    <h3 class="name">CUSTOMERS</h3>
+                    <h5>1111</h5>
+                </li>
+                <li>
+                    <i class="ri-computer-line"></i>
+                    <h3 class="name">TECHNOLOGY</h3>
+                    <h5>1111</h5>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="about-us-details">
+          <div class="about-us-item">
+              <h3>Our Mission</h3>
+              <p>At Luminstep, our mission is to facilitate seamless international contracts and foster global partnerships that help businesses thrive in a competitive world. We are committed to delivering top-tier services, including contract drafting, negotiation, and legal consultation, all tailored to meet international standards. Our team of expert legal advisors and business strategists ensures that every agreement is crafted to align with our clients’ goals while adhering to diverse regulatory requirements, allowing businesses to confidently expand their global reach.</p>
+          </div>
+      
+          <div class="about-us-item">
+              <h3>Our Vision</h3>
+              <p>Our vision is to be the leading provider of international business solutions, empowering companies to successfully navigate the complexities of cross-border agreements. We aim to bridge businesses across borders, creating opportunities for growth and collaboration in every market we serve. Through innovation, strategic thinking, and a commitment to excellence, we envision Luminstep as a catalyst for global business expansion and lasting partnerships.</p>
+          </div>
+      
+          <div class="about-us-item">
+              <h3>Our Values</h3>
+              <p>At Luminstep, our core values guide every aspect of our work. We are committed to integrity, ensuring transparency and ethical conduct in all our dealings. Excellence drives us to consistently deliver high-quality services that exceed client expectations. We value collaboration, recognizing that the strength of partnerships and teamwork is key to achieving success. Above all, we are dedicated to customer-centricity, tailoring our services to meet the unique needs of each client and helping them achieve their international business goals.</p>
+          </div>
+      </div>
+      
+        
+        
+      <div class="about-us-cta">
+        <h3>Let’s Work Together</h3>
+        <p>If you're ready to take your business to the next level, we’d love to hear from you. Get in touch today!</p>
+        <a href="/contact" class="cta-button">Contact Us</a>
+    </div>
+    
+        </section>
+        
+    <!--footer section-->
+<footer class="footer-section">
+  <div class="section-content">
+      <!-- Company Logo and Name -->
+      <div class="logo-and-name">
+         <h1>Luminstep.</h1>
+          <p class="company-name">Luminstep</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-nav">
+         
+          <a href="/" class="footer-link">Home</a>
+          <a href="/about" class="footer-link">About </a>
+          <a href="/service" class="footer-link">Services</a>
+          <a href="/terms" class="footer-link">Terms</a>
+          <a href="/team" class="footer-link">Team</a>
+          <a href="/contact" class="footer-link">Contact</a>
+      </div>
+
+      <!-- Copyright and Social Links -->
+      <div class="copyright-and-social">
+          
+          <div class="social-link-list">
+              <a href="#" class="social-link"><i class="ri-linkedin-line"></i></a>
+              <a href="#" class="social-link"><i class="ri-mail-line"></i></a>
+          </div>
+          <p class="copyright-text"> <i class="ri-copyright-line"></i> 2024 Luminstep.</p>
+      </div>
+      
+      
+  </div>
+</footer>
+
+      </main>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

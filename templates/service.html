@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Luminstep Website{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head> 
+<body>
+    <!--header and navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">LumiNstep.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"><i class="ri-close-large-line"></i></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-item nav-link {% if request.path == '/about' %}active{% endif %}">About us </a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/service" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Services</a>
+                
+                </li>
+                <li class="nav-item">
+                    <a href="/team" class="nav-item nav-link {% if request.path == '/team' %}active{% endif %}">Team</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/terms" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Terms</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-item nav-link {% if request.path == '/contact' %}active{% endif %}">Contact us </a>
+               
+                </li>
+             
+               
+            </ul>
+                <!-- Login Button -->
+                <a href="{{ url_for('login') }}" class="login-button">Login</a>
+            <button id="menu-open-button" class="fas fa-bars"><i class="ri-menu-line"></i></button>
+        </nav>
+    </header>
+    
+
+<!--Service Section-->
+<section id="services" class="service-section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="section-content">
+        <ul class="service-list">
+           <li class="service-item">
+            <div class="icon"><i class="ri-computer-line"></i></div>
+            <h3 class="name">our service</h3>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+           </li>
+           <li class="service-item">
+            <div class="icon"><i class="ri-computer-line"></i></div>
+            <h3 class="name">our service</h3>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+           </li>
+           <li class="service-item">
+            <div class="icon"><i class="ri-computer-line"></i></div>
+            <h3 class="name">our service</h3>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+           </li>
+           <li class="service-item">
+            <div class="icon"><i class="ri-computer-line"></i></div>
+            <h3 class="name">our service</h3>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa distinctio velit fuga,</p>
+           </li>
+          
+           </ul>
+    </div>
+</section>
+
+<!-- Why Our Company Section -->
+<section class="why-company">
+    <div class="section-content">
+        <div class="why-company-row">
+            <!-- First Column: Introduction -->
+            <div class="why-intro">
+                <h2 class="section-title">Why Choose Luminstep?</h2>
+                
+            </div>
+            <!-- Second Column: Features -->
+            <div class="why-features">
+                <div class="why-item">
+                    <i class="ri-team-line"></i>
+                    <h3 class="why-title">Experienced Team</h3>
+                    <p class="why-text">Our team comprises professionals with years of experience, ensuring top-notch service delivery.</p>
+                </div>
+                <div class="why-item">
+                    <i class="ri-award-line"></i>
+                    <h3 class="why-title">Quality Assurance</h3>
+                    <p class="why-text">We prioritize quality in every project to exceed client expectations and achieve excellence.</p>
+                </div>
+                <div class="why-item">
+                    <i class="ri-time-line"></i>
+                    <h3 class="why-title">Timely Delivery</h3>
+                    <p class="why-text">We understand the importance of deadlines and always strive to deliver projects on time.</p>
+                </div>
+                <div class="why-item">
+                    <i class="ri-customer-service-2-line"></i>
+                    <h3 class="why-title">Excellent Support</h3>
+                    <p class="why-text">Our support team is always ready to assist with any inquiries or issues you might have.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="section-content">
+        <div class="testimonial-item">
+            <p class="testimonial-text">"Luminstep has been an excellent partner in helping us achieve our business goals. Their team is highly skilled, and we are thrilled with the results!"</p>
+            <p class="client-name">John Doe, CEO of XYZ Company</p>
+        </div>
+        <div class="testimonial-item">
+            <p class="testimonial-text">"We have worked with many service providers, but none have impressed us as much as Luminstep. They deliver on time, every time!"</p>
+            <p class="client-name">Jane Smith, Founder of ABC Corp</p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio-section">
+    <h2 class="section-title">Our Recent Projects</h2>
+    <div class="section-content">
+        <div class="portfolio-item">
+         
+            <h3 class="project-name">Project One</h3>
+            <p class="project-description">A brief description of the project showcasing our work and the results we achieved.</p>
+        </div>
+        <div class="portfolio-item">
+       
+            <h3 class="project-name">Project Two</h3>
+            <p class="project-description">Another project we completed with outstanding success. The client was highly satisfied with the outcome.</p>
+        </div>
+        <div class="portfolio-item">
+      
+            <h3 class="project-name">Project Three</h3>
+            <p class="project-description">This project involved a creative design and innovative solutions to meet client demands.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="section-content">
+        <div class="faq-item">
+            <h3 class="faq-question">What services do you offer?</h3>
+            <p class="faq-answer">We specialize in managing and executing international contracts, offering comprehensive services for businesses seeking to expand globally.</p>
+            
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">How long does it take to complete a project?</h3>
+            <p class="faq-answer">Project timelines vary depending on the complexity, but we ensure timely delivery for all our clients.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Can you help with ongoing projects?</h3>
+            <p class="faq-answer">Yes, we can assist with ongoing projects, offering guidance, improvements, and support to meet your goals.</p>
+        </div>
+    </div>
+</section>
+
+       <!--footer section-->
+       <footer class="footer-section">
+        <div class="section-content">
+            <!-- Company Logo and Name -->
+            <div class="logo-and-name">
+               <h1>Luminstep.</h1>
+                <p class="company-name">Luminstep</p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+               
+                <a href="/" class="footer-link">Home</a>
+                <a href="/about" class="footer-link">About </a>
+                <a href="/service" class="footer-link">Services</a>
+                <a href="/terms" class="footer-link">Terms</a>
+                <a href="/team" class="footer-link">Team</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+    
+            <!-- Copyright and Social Links -->
+            <div class="copyright-and-social">
+                
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="ri-linkedin-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-mail-line"></i></a>
+                </div>
+                <p class="copyright-text"> <i class="ri-copyright-line"></i> 2024 Luminstep.</p>
+            </div>
+            
+            
+        </div>
+    </footer>
+    
+            </main>
+            <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+    </html>

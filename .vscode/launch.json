@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run APP :)",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "justMyCode": true,
+            "args": [
+                "run",
+                "--host=0.0.0.0",
+                "--no-debugger"
+            ],
+            //"jinja": true,
+            //"preLaunchTask": "build",
+            "env": {
+            }
+        },
+    ]
+}

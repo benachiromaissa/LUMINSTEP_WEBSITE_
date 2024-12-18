@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Luminstep Website{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head> 
+<body>
+    <!--header and navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">LumiNstep.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"><i class="ri-close-large-line"></i></button>
+                <li class="nav-item">
+                    <a href="/" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-item nav-link {% if request.path == '/about' %}active{% endif %}">About us </a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/service" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Services</a>
+                
+                </li>
+                <li class="nav-item">
+                    <a href="/team" class="nav-item nav-link {% if request.path == '/team' %}active{% endif %}">Team</a>
+                   
+                </li>
+                <li class="nav-item">
+                    <a href="/terms" class="nav-item nav-link {% if request.path == '/service' %}active{% endif %}">Terms</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="/contact" class="nav-item nav-link {% if request.path == '/contact' %}active{% endif %}">Contact us </a>
+               
+                </li>
+             
+               
+            </ul>
+              <!-- Login Button -->
+              <a href="{{ url_for('login') }}" class="login-button">Login</a>
+            <button id="menu-open-button" class="fas fa-bars"><i class="ri-menu-line"></i></button>
+        </nav>
+    </header>
+    
+
+
+    <div class="team-section">
+     
+      <h2 class="section-title">Our Team</h2>
+
+      <div class="team-container">
+          <!-- Team Member 1 -->
+          <div class="team-card">
+            <img src="{{ url_for('static', filename='images/h.svg') }}" alt="Team Member" class="team-photo">
+
+              <div class="team-info">
+                  <h3 class="team-name">Houuseyne</h3>
+                  <p class="team-role">Founder & CEO</p>
+                  <div class="social-media">
+                      <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                  </div>
+              </div>
+          </div>
+    
+          <!-- Team Member 2 -->
+          <div class="team-card">
+              <img src="{{ url_for('static', filename='images/h.svg') }}"alt="Team Member" class="team-photo">
+              <div class="team-info">
+                  <h3 class="team-name">Toufik</h3>
+                  <p class="team-role">Operations and Client Relationship Lead </p>
+                  <div class="social-media">
+                      <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                  </div>
+              </div>
+          </div>
+  
+
+          <!-- Team Member 4 -->
+          <div class="team-card">
+            <img src="{{ url_for('static', filename='images/f.svg') }}" alt="Team Member" class="team-photo">
+
+              <div class="team-info">
+                  <h3 class="team-name">Insaf</h3>
+                  <p class="team-role">HR Manager</p>
+                  <div class="social-media">
+                      <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                  </div>
+              </div>
+          </div>
+
+
+          <!-- Team Member 5 -->
+          <div class="team-card">
+            <img src="{{ url_for('static', filename='images/h.svg') }}" alt="Team Member" class="team-photo">
+
+              <div class="team-info">
+                  <h3 class="team-name">Lotfi</h3>
+                  <p class="team-role">Marketing</p>
+                  <div class="social-media">
+                      <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                  </div>
+              </div>
+          </div>
+          <!-- Team Member 6 -->
+          <div class="team-card">
+            <img src="{{ url_for('static', filename='images/f.svg') }}" alt="Team Member" class="team-photo">
+
+              <div class="team-info">
+                  <h3 class="team-name">Hadjar</h3>
+                  <p class="team-role">Marketing Manager</p>
+                  <div class="social-media">
+                      <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                      <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                  </div>
+              </div>
+          </div>
+
+<!-- Team Member 5 -->
+<div class="team-card">
+  <img src="{{ url_for('static', filename='images/h.svg') }}" alt="Team Member" class="team-photo">
+
+    <div class="team-info">
+        <h3 class="team-name">Mohammed islem</h3>
+        <p class="team-role">   Business development manager</p>
+        <div class="social-media">
+            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Team Member 5 -->
+<div class="team-card">
+  <img src="{{ url_for('static', filename='images/h.svg') }}" alt="Team Member" class="team-photo">
+
+    <div class="team-info">
+        <h3 class="team-name">Mubarak</h3>
+        <p class="team-role">Marketing</p>
+        <div class="social-media">
+            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Team Member 5 -->
+<div class="team-card">
+  <img src="{{ url_for('static', filename='images/f.svg') }}" alt="Team Member" class="team-photo">
+
+    <div class="team-info">
+        <h3 class="team-name">UNKNOWN</h3>
+        <p class="team-role">IT specialist</p>
+        <div class="social-media">
+            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Team Member 5 -->
+<div class="team-card">
+  <img src="{{ url_for('static', filename='images/h.svg') }}" alt="Team Member" class="team-photo">
+
+    <div class="team-info">
+        <h3 class="team-name">Yakoub </h3>
+        <p class="team-role">Marketing</p>
+        <div class="social-media">
+            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+ 
+       <!--footer section-->
+       <footer class="footer-section">
+        <div class="section-content">
+            <!-- Company Logo and Name -->
+            <div class="logo-and-name">
+               <h1>Luminstep.</h1>
+                <p class="company-name">Luminstep</p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+               
+                <a href="/" class="footer-link">Home</a>
+                <a href="/about" class="footer-link">About </a>
+                <a href="/service" class="footer-link">Services</a>
+                <a href="/terms" class="footer-link">Terms</a>
+                <a href="/team" class="footer-link">Team</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+    
+            <!-- Copyright and Social Links -->
+            <div class="copyright-and-social">
+                
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="ri-linkedin-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-mail-line"></i></a>
+                </div>
+                <p class="copyright-text"> <i class="ri-copyright-line"></i> 2024 Luminstep.</p>
+            </div>
+            
+            
+        </div>
+    </footer>
+    
+            </main>
+            <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+    </html>
